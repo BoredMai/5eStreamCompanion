@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {
+  bottomRow,
   characterBanner,
   charClass,
   leftColumn,
@@ -9,6 +10,7 @@ import {
   rightColumn,
   topRow,
 } from './index.css';
+import AttributeBlock from '../AttributeBlock';
 
 export default class CharacterBanner extends Component {
   renderHeader() {
@@ -29,6 +31,13 @@ export default class CharacterBanner extends Component {
   }
 
   render() {
-    return <div className={characterBanner}>{this.renderHeader()}</div>;
+    return (
+      <div className={characterBanner}>
+        {this.renderHeader()}
+        <div className={bottomRow}>
+          <AttributeBlock attribute={'STR'} value={20} />
+        </div>
+      </div>
+    );
   }
 }

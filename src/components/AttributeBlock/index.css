@@ -1,0 +1,27 @@
+:local(.attribute-block) {
+  background: no-repeat url('/images/stat_scroll.png') 50% / 100%;
+  image-rendering: pixelated;
+  width: 8rem;
+  height: 10rem;
+}
+
+:local(.attribute-block .tag) {
+  font-size: 3.2rem;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  top: -0.75rem;
+  width: 100%;
+}
+
+:local(.attribute-block .score) {
+  font-size: 4.8rem;
+  position: relative;
+  text-align: center;
+  top: -0.25rem;
+}
+
+:local(.attribute-block .bonus) {
+  font-size: 3.2rem;
+  text-align: center;
+}

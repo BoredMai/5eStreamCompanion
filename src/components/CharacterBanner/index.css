@@ -1,0 +1,7 @@
+:local(.character-banner) {
+  border-image: url('../../../images/border_27slice.png') 27;
+  border-style: solid;
+  border-width: 27px;
+  font-size: 1.4rem;
+  padding: 1rem;
+}

@@ -3,6 +3,10 @@
   src: url('/fonts/eight-bit-madness.ttf');
 }
 
+.app {
+  font-size: 10px;
+}
+
 .font-8bit {
   font-family: 'Eight Bit Madness', monospace;
 }

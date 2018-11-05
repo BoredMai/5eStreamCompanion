@@ -2,15 +2,8 @@
 
 exports[`<App /> renders properly 1`] = `
 <div
-  className="font8Bit"
-  style={
-    Object {
-      "textAlign": "center",
-    }
-  }
+  className="app font8Bit"
 >
-  <h1>
-    Hello World
-  </h1>
+  <CharacterBanner />
 </div>
 `;

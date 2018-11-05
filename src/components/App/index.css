@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Eight Bit Madness';
+  src: url('/fonts/eight-bit-madness.ttf');
+}
+
+.font-8bit {
+  font-family: 'Eight Bit Madness', monospace;
+}

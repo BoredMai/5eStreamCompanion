@@ -4,4 +4,26 @@
   border-width: 27px;
   font-size: 1.4rem;
   padding: 1rem;
+  width: fit-content;
+}
+
+:local(.character-banner .top-row) {
+  display: flex;
+}
+
+:local(.character-banner .left-column) {
+  display: flex;
+  flex-basis: 3;
+  flex-direction: column;
+}
+
+:local(.character-banner .right-column) {
+  display: flex;
+  flex-basis: 1;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+
+:local(.character-banner .name) {
+  font-size: 2.4rem;
 }

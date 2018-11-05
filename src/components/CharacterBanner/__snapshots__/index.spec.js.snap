@@ -4,6 +4,39 @@ exports[`<CharacterBanner /> renders properly 1`] = `
 <div
   className="characterBanner"
 >
-  This is a character banner.
+  <React.Fragment>
+    <div
+      className="topRow"
+    >
+      <div
+        className="leftColumn"
+      >
+        <span
+          className="name"
+        >
+          Character Name
+        </span>
+        <span
+          className="playerName"
+        >
+          Player Name
+        </span>
+      </div>
+      <div
+        className="rightColumn"
+      >
+        <span
+          className="race"
+        >
+          Character Race
+        </span>
+        <span
+          className="charClass"
+        >
+          Character Class
+        </span>
+      </div>
+    </div>
+  </React.Fragment>
 </div>
 `;

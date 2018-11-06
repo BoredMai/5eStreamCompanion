@@ -1,0 +1,11 @@
+:local(.ac-shield) {
+  background: no-repeat url('/images/ac_shield.png') 50% / 100%;
+  image-rendering: pixelated;
+  width: 8.4rem;
+  height: 10.5rem;
+}
+
+:local(.ac-shield .score) {
+  position: relative;
+  top: 1.25rem;
+}

@@ -38,5 +38,37 @@ exports[`<CharacterBanner /> renders properly 1`] = `
       </div>
     </div>
   </React.Fragment>
+  <div
+    className="bottomRow"
+  >
+    <div
+      className="attributeContainer"
+    >
+      <AttributeBlock
+        attribute="STR"
+        value={20}
+      />
+      <AttributeBlock
+        attribute="DEX"
+        value={20}
+      />
+      <AttributeBlock
+        attribute="CON"
+        value={20}
+      />
+      <AttributeBlock
+        attribute="INT"
+        value={20}
+      />
+      <AttributeBlock
+        attribute="WIS"
+        value={20}
+      />
+      <AttributeBlock
+        attribute="CHA"
+        value={20}
+      />
+    </div>
+  </div>
 </div>
 `;

@@ -2,7 +2,7 @@
 
 exports[`<App /> renders properly 1`] = `
 <div
-  className="app font8Bit"
+  className="font8Bit"
 >
   <CharacterBanner />
 </div>

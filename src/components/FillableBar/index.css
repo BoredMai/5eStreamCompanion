@@ -1,0 +1,17 @@
+:local(.fillable-bar) {
+  align-items: center;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  height: 1.5rem;
+  position: relative;
+  width: 15rem;
+}
+
+:local(.fillable-bar .bar-fill) {
+  height: 1.5rem;
+  left: 0;
+  top: 0;
+  position: absolute;
+  z-index: -1;
+}

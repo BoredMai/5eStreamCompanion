@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import {
+  attributeContainer,
   bottomRow,
   characterBanner,
   charClass,
@@ -35,7 +36,14 @@ export default class CharacterBanner extends Component {
       <div className={characterBanner}>
         {this.renderHeader()}
         <div className={bottomRow}>
-          <AttributeBlock attribute={'STR'} value={20} />
+          <div className={attributeContainer}>
+            <AttributeBlock attribute={'STR'} value={20} />
+            <AttributeBlock attribute={'DEX'} value={20} />
+            <AttributeBlock attribute={'CON'} value={20} />
+            <AttributeBlock attribute={'INT'} value={20} />
+            <AttributeBlock attribute={'WIS'} value={20} />
+            <AttributeBlock attribute={'CHA'} value={20} />
+          </div>
         </div>
       </div>
     );

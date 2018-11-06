@@ -9,7 +9,7 @@ exports[`<CharacterBanner /> renders properly 1`] = `
       className="topRow"
     >
       <div
-        className="leftColumn"
+        className="flexColumn"
       >
         <span
           className="name"
@@ -23,7 +23,7 @@ exports[`<CharacterBanner /> renders properly 1`] = `
         </span>
       </div>
       <div
-        className="rightColumn"
+        className="flexColumn"
       >
         <span
           className="race"
@@ -66,6 +66,13 @@ exports[`<CharacterBanner /> renders properly 1`] = `
       />
       <AttributeBlock
         attribute="CHA"
+        value={20}
+      />
+    </div>
+    <div
+      className="acShieldContainer"
+    >
+      <ACShield
         value={20}
       />
     </div>

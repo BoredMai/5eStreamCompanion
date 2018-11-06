@@ -1,24 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AttributeBlock /> renders properly 1`] = `
+exports[`<ACShield /> renders properly 1`] = `
 <div
-  className="attributeBlock"
+  className="acShield"
 >
   <div
     className="tag whiteOutline"
   >
-    STR
+    AC
   </div>
   <div
     className="score score whiteOutline"
   >
     20
-  </div>
-  <div
-    className="bonus whiteOutline"
-  >
-    +
-    5
   </div>
 </div>
 `;

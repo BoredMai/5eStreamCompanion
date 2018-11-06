@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 import Attributes from '../../constants/attributes';
 
-import { attributeBlock, bonus, tag, score } from './index.css';
-import { whiteOutline } from '../../index.css';
+import { attributeBlock, bonus, score as attrScore } from './index.css';
+import { tag, score, whiteOutline } from '../../index.css';
 
 export default class AttributeBlock extends Component {
   render() {
@@ -14,7 +14,7 @@ export default class AttributeBlock extends Component {
     return (
       <div className={attributeBlock}>
         <div className={cn(tag, whiteOutline)}>{attribute}</div>
-        <div className={cn(score, whiteOutline)}>{value}</div>
+        <div className={cn(attrScore, score, whiteOutline)}>{value}</div>
         <div className={cn(bonus, whiteOutline)}>
           {value > 9 && '+'}
           {Math.floor((value - 10) / 2)}

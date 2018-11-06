@@ -7,6 +7,20 @@
   font-family: 'Eight Bit Madness', monospace;
 }
 
+.tag {
+  font-size: 3.2rem;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  top: -1rem;
+  width: 100%;
+}
+
+.score {
+  font-size: 4.8rem;
+  text-align: center;
+}
+
 .white-outline {
   text-shadow: -2px -2px 0 #ffffff, -2px 2px 0 #ffffff, 2px -2px 0 #ffffff,
     2px 2px 0 #ffffff;

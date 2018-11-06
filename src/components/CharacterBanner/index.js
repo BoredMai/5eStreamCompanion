@@ -1,28 +1,32 @@
+import cn from 'classnames';
 import React, { Component, Fragment } from 'react';
+
+import ACShield from '../ACShield';
+import AttributeBlock from '../AttributeBlock';
+
 import {
+  acShieldContainer,
   attributeContainer,
   bottomRow,
   characterBanner,
   charClass,
-  leftColumn,
+  flexColumn,
   name,
   playerName,
   race,
-  rightColumn,
   topRow,
 } from './index.css';
-import AttributeBlock from '../AttributeBlock';
 
 export default class CharacterBanner extends Component {
   renderHeader() {
     return (
       <Fragment>
         <div className={topRow}>
-          <div className={leftColumn}>
+          <div className={flexColumn}>
             <span className={name}>Character Name</span>
             <span className={playerName}>Player Name</span>
           </div>
-          <div className={rightColumn}>
+          <div className={flexColumn}>
             <span className={race}>Character Race</span>
             <span className={charClass}>Character Class</span>
           </div>
@@ -43,6 +47,9 @@ export default class CharacterBanner extends Component {
             <AttributeBlock attribute={'INT'} value={20} />
             <AttributeBlock attribute={'WIS'} value={20} />
             <AttributeBlock attribute={'CHA'} value={20} />
+          </div>
+          <div className={cn(acShieldContainer)}>
+            <ACShield value={20} />
           </div>
         </div>
       </div>

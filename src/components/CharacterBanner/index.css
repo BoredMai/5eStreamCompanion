@@ -3,30 +3,23 @@
   border-style: solid;
   border-width: 27px;
   font-size: 2.4rem;
-  padding: 1.5rem;
+  padding: 2rem;
   width: fit-content;
 }
 
 :local(.character-banner .bottom-row) {
   display: flex;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 :local(.character-banner .top-row) {
   display: flex;
+  justify-content: space-between;
 }
 
-:local(.character-banner .left-column) {
+:local(.character-banner .flex-column) {
   display: flex;
-  flex-grow: 3;
   flex-direction: column;
-}
-
-:local(.character-banner .right-column) {
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  margin-left: 1rem;
 }
 
 :local(.character-banner .name) {
@@ -35,8 +28,13 @@
 
 :local(.character-banner .attribute-container) {
   display: flex;
+  flex-grow: 3;
 }
 
 :local(.character-banner .attribute-container > *:not(:last-child)) {
   margin-right: 1.5rem;
+}
+
+:local(.character-banner .ac-shield-container) {
+  margin-left: 3rem;
 }

@@ -26,6 +26,10 @@
   font-size: 3.2rem;
 }
 
+:local(.character-banner .margin-top-half) {
+  margin-top: 0.5rem;
+}
+
 :local(.character-banner .attribute-container) {
   display: flex;
   flex-grow: 3;

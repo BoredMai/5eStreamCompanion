@@ -3,6 +3,7 @@ import React, { Component, Fragment } from 'react';
 
 import ACShield from '../ACShield';
 import AttributeBlock from '../AttributeBlock';
+import FillableBar from '../FillableBar';
 
 import {
   acShieldContainer,
@@ -11,6 +12,7 @@ import {
   characterBanner,
   charClass,
   flexColumn,
+  marginTopHalf,
   name,
   playerName,
   race,
@@ -25,6 +27,16 @@ export default class CharacterBanner extends Component {
           <div className={flexColumn}>
             <span className={name}>Character Name</span>
             <span className={playerName}>Player Name</span>
+          </div>
+          <div className={flexColumn}>
+            <FillableBar color={'#F66'} current={30} label={'HP'} max={60} />
+            <FillableBar
+              className={marginTopHalf}
+              color={'#66F'}
+              current={30}
+              label={'XP'}
+              max={60}
+            />
           </div>
           <div className={flexColumn}>
             <span className={race}>Character Race</span>

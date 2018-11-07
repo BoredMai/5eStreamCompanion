@@ -15,3 +15,8 @@
   position: absolute;
   z-index: -1;
 }
+
+:local(.fillable-bar .bar-label) {
+  left: -3rem;
+  position: absolute;
+}

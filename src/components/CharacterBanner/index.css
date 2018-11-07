@@ -2,14 +2,18 @@
   border-image: url('/images/border_27slice.png') 27;
   border-style: solid;
   border-width: 27px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   font-size: 2.4rem;
+  height: 30rem;
   padding: 2rem;
-  width: fit-content;
+  width: 80rem;
 }
 
 :local(.character-banner .bottom-row) {
   display: flex;
-  margin-top: 4rem;
 }
 
 :local(.character-banner .top-row) {
@@ -20,10 +24,20 @@
 :local(.character-banner .flex-column) {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
-:local(.character-banner .name) {
+:local(.character-banner .name-tag) {
   font-size: 3.2rem;
+}
+
+:local(.character-banner .flex-basis-half) {
+  flex-basis: 50%;
+}
+
+:local(.character-banner .race-tag),
+:local(.character-banner .class-tag) {
+  text-align: right;
 }
 
 :local(.character-banner .margin-top-half) {

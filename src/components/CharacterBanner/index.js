@@ -1,5 +1,6 @@
 import cn from 'classnames';
 import React, { Component, Fragment } from 'react';
+import PropTypes from 'prop-types';
 
 import ACShield from '../ACShield';
 import AttributeBlock from '../AttributeBlock';
@@ -10,37 +11,59 @@ import {
   attributeContainer,
   bottomRow,
   characterBanner,
-  charClass,
+  classTag,
   flexColumn,
+  flexBasisHalf,
   marginTopHalf,
-  name,
-  playerName,
-  race,
+  nameTag,
+  playerTag,
+  raceTag,
   topRow,
 } from './index.css';
+import Attributes from '../../constants/attributes';
+import { getNextLevelExp } from '../../constants/experience';
 
 export default class CharacterBanner extends Component {
+  flattenClassNames = ({ level, name }) => `${name} ${level}`;
+
+  renderAttribute = (attrBlock, key) => (
+    <AttributeBlock key={key} {...attrBlock} />
+  );
+
+  renderAttributes() {
+    const { attributes } = this.props;
+
+    return (
+      <div className={attributeContainer}>
+        {attributes.map(this.renderAttribute)}
+      </div>
+    );
+  }
+
   renderHeader() {
+    const { classes, hp, level, name, player, race, xp } = this.props;
     return (
       <Fragment>
         <div className={topRow}>
-          <div className={flexColumn}>
-            <span className={name}>Character Name</span>
-            <span className={playerName}>Player Name</span>
+          <div className={cn(flexBasisHalf, flexColumn)}>
+            <span className={nameTag}>{name}</span>
+            <span className={playerTag}>{player}</span>
           </div>
           <div className={flexColumn}>
-            <FillableBar color={'#F66'} current={30} label={'HP'} max={60} />
+            <FillableBar color={'#F66'} label={'HP'} {...hp} />
             <FillableBar
               className={marginTopHalf}
               color={'#66F'}
-              current={30}
+              current={xp}
               label={'XP'}
-              max={60}
+              max={getNextLevelExp(level)}
             />
           </div>
           <div className={flexColumn}>
-            <span className={race}>Character Race</span>
-            <span className={charClass}>Character Class</span>
+            <span className={raceTag}>{race}</span>
+            <span className={classTag}>
+              {classes.map(this.flattenClassNames).join(', ')}
+            </span>
           </div>
         </div>
       </Fragment>
@@ -48,23 +71,42 @@ export default class CharacterBanner extends Component {
   }
 
   render() {
+    const { ac } = this.props;
     return (
       <div className={characterBanner}>
         {this.renderHeader()}
         <div className={bottomRow}>
-          <div className={attributeContainer}>
-            <AttributeBlock attribute={'STR'} value={20} />
-            <AttributeBlock attribute={'DEX'} value={20} />
-            <AttributeBlock attribute={'CON'} value={20} />
-            <AttributeBlock attribute={'INT'} value={20} />
-            <AttributeBlock attribute={'WIS'} value={20} />
-            <AttributeBlock attribute={'CHA'} value={20} />
-          </div>
+          {this.renderAttributes()}
           <div className={cn(acShieldContainer)}>
-            <ACShield value={20} />
+            <ACShield value={ac} />
           </div>
         </div>
       </div>
     );
   }
+
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    player: PropTypes.string.isRequired,
+    race: PropTypes.string.isRequired,
+    classes: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        level: PropTypes.number.isRequired,
+      })
+    ),
+    level: PropTypes.number.isRequired,
+    hp: PropTypes.shape({
+      current: PropTypes.number.isRequired,
+      max: PropTypes.number.isRequired,
+    }),
+    xp: PropTypes.number.isRequired,
+    attributes: PropTypes.arrayOf(
+      PropTypes.shape({
+        attribute: PropTypes.oneOf(Object.keys(Attributes)).isRequired,
+        value: PropTypes.number.isRequired,
+      })
+    ),
+    ac: PropTypes.number.isRequired,
+  };
 }

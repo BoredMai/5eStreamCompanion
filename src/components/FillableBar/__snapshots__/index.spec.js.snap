@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FillableBar /> renders properly 1`] = `
+<div>
+  <div
+    className="fillableBar"
+  >
+    <span
+      className="barLabel"
+    />
+    <div
+      className="barFill"
+      style={
+        Object {
+          "backgroundColor": "#ff6666",
+          "width": "100%",
+        }
+      }
+    />
+    <span>
+      100
+       / 
+      100
+    </span>
+  </div>
+</div>
+`;

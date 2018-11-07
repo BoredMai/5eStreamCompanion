@@ -15,5 +15,4 @@ module.exports = {
   },
   setupTestFrameworkScriptFile: '<rootDir>__tests__/setupEnzyme.js',
   testMatch: ['**/src/components/**/*.spec.js'],
-  verbose: true,
 };

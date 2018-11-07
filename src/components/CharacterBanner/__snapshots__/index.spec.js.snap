@@ -9,31 +9,48 @@ exports[`<CharacterBanner /> renders properly 1`] = `
       className="topRow"
     >
       <div
-        className="flexColumn"
+        className="flexBasisHalf flexColumn"
       >
         <span
-          className="name"
+          className="nameTag"
         >
-          Character Name
+          Savarax 'Lee' Swovarah
         </span>
         <span
-          className="playerName"
+          className="playerTag"
         >
-          Player Name
+          Chaotic
         </span>
       </div>
       <div
         className="flexColumn"
       >
+        <FillableBar
+          color="#F66"
+          current={10}
+          label="HP"
+          max={10}
+        />
+        <FillableBar
+          className="marginTopHalf"
+          color="#66F"
+          current={0}
+          label="XP"
+          max={300}
+        />
+      </div>
+      <div
+        className="flexColumn"
+      >
         <span
-          className="race"
+          className="raceTag"
         >
-          Character Race
+          Dragonborn
         </span>
         <span
-          className="charClass"
+          className="classTag"
         >
-          Character Class
+          Bard 1
         </span>
       </div>
     </div>
@@ -46,34 +63,34 @@ exports[`<CharacterBanner /> renders properly 1`] = `
     >
       <AttributeBlock
         attribute="STR"
-        value={20}
+        value={17}
       />
       <AttributeBlock
         attribute="DEX"
-        value={20}
+        value={8}
       />
       <AttributeBlock
         attribute="CON"
-        value={20}
+        value={14}
       />
       <AttributeBlock
         attribute="INT"
-        value={20}
+        value={13}
       />
       <AttributeBlock
         attribute="WIS"
-        value={20}
+        value={10}
       />
       <AttributeBlock
         attribute="CHA"
-        value={20}
+        value={16}
       />
     </div>
     <div
       className="acShieldContainer"
     >
       <ACShield
-        value={20}
+        value={10}
       />
     </div>
   </div>

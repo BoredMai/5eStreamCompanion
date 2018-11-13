@@ -2,96 +2,100 @@
 
 exports[`<CharacterBanner /> renders properly 1`] = `
 <div
-  className="characterBanner"
+  className="borderContainer"
 >
-  <React.Fragment>
-    <div
-      className="topRow"
-    >
-      <div
-        className="flexBasisHalf flexColumn"
-      >
-        <span
-          className="nameTag"
-        >
-          Savarax 'Lee' Swovarah
-        </span>
-        <span
-          className="playerTag"
-        >
-          Chaotic
-        </span>
-      </div>
-      <div
-        className="flexColumn"
-      >
-        <FillableBar
-          color="#F66"
-          current={10}
-          label="HP"
-          max={10}
-        />
-        <FillableBar
-          className="marginTopHalf"
-          color="#66F"
-          current={0}
-          label="XP"
-          max={300}
-        />
-      </div>
-      <div
-        className="flexColumn"
-      >
-        <span
-          className="raceTag"
-        >
-          Dragonborn
-        </span>
-        <span
-          className="classTag"
-        >
-          Bard 1
-        </span>
-      </div>
-    </div>
-  </React.Fragment>
   <div
-    className="bottomRow"
+    className="characterBanner"
   >
+    <React.Fragment>
+      <div
+        className="topRow"
+      >
+        <div
+          className="flexBasisHalf flexColumn"
+        >
+          <span
+            className="nameTag"
+          >
+            Savarax 'Lee' Swovarah
+          </span>
+          <span
+            className="playerTag"
+          >
+            Chaotic
+          </span>
+        </div>
+        <div
+          className="flexColumn"
+        >
+          <FillableBar
+            color="#F66"
+            current={10}
+            label="HP"
+            max={10}
+          />
+          <FillableBar
+            className="marginTopHalf"
+            color="#66F"
+            current={0}
+            label="XP"
+            max={300}
+          />
+        </div>
+        <div
+          className="flexColumn"
+        >
+          <span
+            className="raceTag"
+          >
+            Dragonborn
+          </span>
+          <span
+            className="classTag"
+          >
+            Bard 1
+          </span>
+        </div>
+      </div>
+    </React.Fragment>
     <div
-      className="attributeContainer"
+      className="bottomRow"
     >
-      <AttributeBlock
-        attribute="STR"
-        value={17}
-      />
-      <AttributeBlock
-        attribute="DEX"
-        value={8}
-      />
-      <AttributeBlock
-        attribute="CON"
-        value={14}
-      />
-      <AttributeBlock
-        attribute="INT"
-        value={13}
-      />
-      <AttributeBlock
-        attribute="WIS"
-        value={10}
-      />
-      <AttributeBlock
-        attribute="CHA"
-        value={16}
-      />
-    </div>
-    <div
-      className="acShieldContainer"
-    >
-      <ACShield
-        value={10}
-      />
+      <div
+        className="attributeContainer"
+      >
+        <AttributeBlock
+          attribute="STR"
+          value={17}
+        />
+        <AttributeBlock
+          attribute="DEX"
+          value={8}
+        />
+        <AttributeBlock
+          attribute="CON"
+          value={14}
+        />
+        <AttributeBlock
+          attribute="INT"
+          value={13}
+        />
+        <AttributeBlock
+          attribute="WIS"
+          value={10}
+        />
+        <AttributeBlock
+          attribute="CHA"
+          value={16}
+        />
+      </div>
+      <div
+        className="acShieldContainer"
+      >
+        <ACShield
+          value={10}
+        />
+      </div>
     </div>
   </div>
 </div>

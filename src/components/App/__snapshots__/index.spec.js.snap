@@ -2,8 +2,58 @@
 
 exports[`<App /> renders properly 1`] = `
 <div
-  className="font8Bit"
+  className="characterContainer font8Bit"
 >
+  <CharacterBanner
+    ac={15}
+    attributes={
+      Array [
+        Object {
+          "attribute": "STR",
+          "value": 16,
+        },
+        Object {
+          "attribute": "DEX",
+          "value": 14,
+        },
+        Object {
+          "attribute": "CON",
+          "value": 16,
+        },
+        Object {
+          "attribute": "INT",
+          "value": 9,
+        },
+        Object {
+          "attribute": "WIS",
+          "value": 12,
+        },
+        Object {
+          "attribute": "CHA",
+          "value": 12,
+        },
+      ]
+    }
+    classes={
+      Array [
+        Object {
+          "level": 1,
+          "name": "Fighter",
+        },
+      ]
+    }
+    hp={
+      Object {
+        "current": 13,
+        "max": 13,
+      }
+    }
+    level={1}
+    name="Victor 'Invictus' Ursus"
+    player="PhoenixFire"
+    race="Half-Orc"
+    xp={200}
+  />
   <CharacterBanner
     ac={10}
     attributes={
@@ -55,12 +105,12 @@ exports[`<App /> renders properly 1`] = `
     xp={0}
   />
   <CharacterBanner
-    ac={15}
+    ac={13}
     attributes={
       Array [
         Object {
           "attribute": "STR",
-          "value": 16,
+          "value": 9,
         },
         Object {
           "attribute": "DEX",
@@ -68,19 +118,19 @@ exports[`<App /> renders properly 1`] = `
         },
         Object {
           "attribute": "CON",
-          "value": 16,
+          "value": 14,
         },
         Object {
           "attribute": "INT",
-          "value": 9,
+          "value": 10,
         },
         Object {
           "attribute": "WIS",
-          "value": 12,
+          "value": 14,
         },
         Object {
           "attribute": "CHA",
-          "value": 12,
+          "value": 16,
         },
       ]
     }
@@ -88,20 +138,70 @@ exports[`<App /> renders properly 1`] = `
       Array [
         Object {
           "level": 1,
-          "name": "Fighter",
+          "name": "Bard",
         },
       ]
     }
     hp={
       Object {
-        "current": 13,
-        "max": 13,
+        "current": 10,
+        "max": 10,
       }
     }
     level={1}
-    name="Victor 'Invictus' Ursus"
-    player="PhoenixFire"
-    race="Half-Orc"
+    name="Einwynn Tordannon"
+    player="Jack"
+    race="Lamia"
+    xp={200}
+  />
+  <CharacterBanner
+    ac={15}
+    attributes={
+      Array [
+        Object {
+          "attribute": "STR",
+          "value": 14,
+        },
+        Object {
+          "attribute": "DEX",
+          "value": 10,
+        },
+        Object {
+          "attribute": "CON",
+          "value": 14,
+        },
+        Object {
+          "attribute": "INT",
+          "value": 17,
+        },
+        Object {
+          "attribute": "WIS",
+          "value": 13,
+        },
+        Object {
+          "attribute": "CHA",
+          "value": 8,
+        },
+      ]
+    }
+    classes={
+      Array [
+        Object {
+          "level": 1,
+          "name": "Mystic",
+        },
+      ]
+    }
+    hp={
+      Object {
+        "current": 10,
+        "max": 10,
+      }
+    }
+    level={1}
+    name="Medic"
+    player="Nate"
+    race="Warforged"
     xp={200}
   />
 </div>

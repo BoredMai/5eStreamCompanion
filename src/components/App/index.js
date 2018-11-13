@@ -11,8 +11,27 @@ export default class App extends Component {
     characters: Characters,
   };
 
+  updateCharacter = newChar => {
+    const { characters } = this.state;
+
+    const charIndex = characters.findIndex(
+      char => char.player === newChar.player
+    );
+
+    let newCharacters = characters.slice();
+    newCharacters[charIndex] = newChar;
+
+    this.setState({
+      characters: newCharacters,
+    });
+  };
+
   renderBanner = (bannerProps, key) => (
-    <CharacterBanner key={key} {...bannerProps} />
+    <CharacterBanner
+      key={key}
+      onUpdate={this.updateCharacter}
+      {...bannerProps}
+    />
   );
 
   render() {

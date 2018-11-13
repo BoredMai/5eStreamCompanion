@@ -27,6 +27,55 @@ import { getNextLevelExp } from '../../constants/experience';
 export default class CharacterBanner extends Component {
   flattenClassNames = ({ level, name }) => `${name} ${level}`;
 
+  constructor(props) {
+    super(props);
+
+    const { player } = props;
+
+    window[player] = {
+      addXP: this.addXP,
+      damage: this.damage,
+      heal: this.heal,
+      setHP: this.setHP,
+    };
+  }
+
+  addXP = amount => {
+    const { xp, onUpdate } = this.props;
+
+    onUpdate({ ...this.props, xp: xp + amount });
+  };
+
+  damage = amount => {
+    const {
+      hp: { current, max },
+      onUpdate,
+    } = this.props;
+
+    onUpdate({ ...this.props, hp: { current: current - amount, max } });
+  };
+
+  heal = amount => {
+    const {
+      hp: { current, max },
+      onUpdate,
+    } = this.props;
+
+    onUpdate({
+      ...this.props,
+      hp: { current: Math.min(current + amount, max), max },
+    });
+  };
+
+  setHP = amount => {
+    const {
+      hp: { max },
+      onUpdate,
+    } = this.props;
+
+    onUpdate({ ...this.props, hp: { current: amount, max } });
+  };
+
   renderAttribute = (attrBlock, key) => (
     <AttributeBlock key={key} {...attrBlock} />
   );
@@ -89,27 +138,29 @@ export default class CharacterBanner extends Component {
   }
 
   static propTypes = {
-    name: PropTypes.string.isRequired,
-    player: PropTypes.string.isRequired,
-    race: PropTypes.string.isRequired,
-    classes: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        level: PropTypes.number.isRequired,
-      })
-    ),
-    level: PropTypes.number.isRequired,
-    hp: PropTypes.shape({
-      current: PropTypes.number.isRequired,
-      max: PropTypes.number.isRequired,
-    }),
-    xp: PropTypes.number.isRequired,
+    ac: PropTypes.number.isRequired,
     attributes: PropTypes.arrayOf(
       PropTypes.shape({
         attribute: PropTypes.oneOf(Object.keys(Attributes)).isRequired,
         value: PropTypes.number.isRequired,
       })
     ),
-    ac: PropTypes.number.isRequired,
+    classes: PropTypes.arrayOf(
+      PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        level: PropTypes.number.isRequired,
+      })
+    ),
+    hp: PropTypes.shape({
+      current: PropTypes.number.isRequired,
+      max: PropTypes.number.isRequired,
+    }),
+    level: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    player: PropTypes.string.isRequired,
+    race: PropTypes.string.isRequired,
+    xp: PropTypes.number.isRequired,
+
+    onUpdate: PropTypes.func.isRequired,
   };
 }

@@ -3,6 +3,11 @@
   src: url('/fonts/eight-bit-madness.ttf');
 }
 
+body {
+  background-color: #333339;
+  margin: 0;
+}
+
 .font-8bit {
   font-family: 'Eight Bit Madness', monospace;
 }

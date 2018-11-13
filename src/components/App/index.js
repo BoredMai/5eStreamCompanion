@@ -1,6 +1,8 @@
+import cn from 'classnames';
 import React, { Component } from 'react';
 
 import { font8Bit } from '../../index.css';
+import { characterContainer } from './index.css';
 import CharacterBanner from '../CharacterBanner';
 
 export default class App extends Component {
@@ -42,6 +44,42 @@ export default class App extends Component {
         ],
         ac: 15,
       },
+      {
+        name: 'Einwynn Tordannon',
+        player: 'Jack',
+        race: 'Lamia',
+        classes: [{ name: 'Bard', level: 1 }],
+        level: 1,
+        hp: { current: 10, max: 10 },
+        xp: 200,
+        attributes: [
+          { attribute: 'STR', value: 9 },
+          { attribute: 'DEX', value: 14 },
+          { attribute: 'CON', value: 14 },
+          { attribute: 'INT', value: 10 },
+          { attribute: 'WIS', value: 14 },
+          { attribute: 'CHA', value: 16 },
+        ],
+        ac: 13,
+      },
+      {
+        name: 'Medic',
+        player: 'Nate',
+        race: 'Warforged',
+        classes: [{ name: 'Mystic', level: 1 }],
+        level: 1,
+        hp: { current: 10, max: 10 },
+        xp: 200,
+        attributes: [
+          { attribute: 'STR', value: 14 },
+          { attribute: 'DEX', value: 10 },
+          { attribute: 'CON', value: 14 },
+          { attribute: 'INT', value: 17 },
+          { attribute: 'WIS', value: 13 },
+          { attribute: 'CHA', value: 8 },
+        ],
+        ac: 15,
+      },
     ],
   };
 
@@ -51,6 +89,10 @@ export default class App extends Component {
 
   render() {
     const { characters } = this.state;
-    return <div className={font8Bit}>{characters.map(this.renderBanner)}</div>;
+    return (
+      <div className={cn(characterContainer, font8Bit)}>
+        {characters.map(this.renderBanner)}
+      </div>
+    );
   }
 }

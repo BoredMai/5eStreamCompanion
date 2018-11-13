@@ -9,6 +9,7 @@ import FillableBar from '../FillableBar';
 import {
   acShieldContainer,
   attributeContainer,
+  borderContainer,
   bottomRow,
   characterBanner,
   classTag,
@@ -73,12 +74,14 @@ export default class CharacterBanner extends Component {
   render() {
     const { ac } = this.props;
     return (
-      <div className={characterBanner}>
-        {this.renderHeader()}
-        <div className={bottomRow}>
-          {this.renderAttributes()}
-          <div className={cn(acShieldContainer)}>
-            <ACShield value={ac} />
+      <div className={borderContainer}>
+        <div className={characterBanner}>
+          {this.renderHeader()}
+          <div className={bottomRow}>
+            {this.renderAttributes()}
+            <div className={cn(acShieldContainer)}>
+              <ACShield value={ac} />
+            </div>
           </div>
         </div>
       </div>

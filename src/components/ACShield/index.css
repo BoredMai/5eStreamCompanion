@@ -1,5 +1,5 @@
 :local(.ac-shield) {
-  background: no-repeat url('/images/ac_shield.png') 50% / 100%;
+  background: no-repeat url('/src/assets/images/ac_shield.png') 50% / 100%;
   image-rendering: pixelated;
   width: 8.4rem;
   height: 10.5rem;

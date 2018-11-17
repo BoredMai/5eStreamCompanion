@@ -18,16 +18,16 @@
   padding: 2rem;
 }
 
-:local(.character-banner .bottom-row) {
+:local(.bottom-row) {
   display: flex;
 }
 
-:local(.character-banner .top-row) {
+:local(.top-row) {
   display: flex;
   justify-content: space-between;
 }
 
-:local(.character-banner .flex-column) {
+:local(.flex-column) {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -61,4 +61,18 @@
 
 :local(.character-banner .ac-shield-container) {
   margin-left: 3rem;
+}
+
+/* Battle Mode Styles */
+:global(.battle-mode) :local(.border-container) {
+  height: auto;
+  width: 30rem;
+}
+
+:global(.battle-mode) :local(.character-banner) {
+  padding: 1rem;
+}
+
+:global(.battle-mode) :local(.name-tag) {
+  margin-bottom: 1rem;
 }

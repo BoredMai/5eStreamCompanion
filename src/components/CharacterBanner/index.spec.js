@@ -1,33 +1,40 @@
 import React from 'react';
 import { shallow } from 'enzyme';
+import Chaotic from '../../assets/characters/chaotic';
+import Hyuna from '../../assets/characters/hyuna';
+import Jack from '../../assets/characters/jack';
 import CharacterBanner from '.';
 
 describe('<CharacterBanner />', () => {
   let wrapper;
-  let props = {
-    name: "Savarax 'Lee' Swovarah",
-    player: 'Chaotic',
-    race: 'Dragonborn',
-    classes: [{ name: 'Bard', level: 1 }],
-    level: 1,
-    hp: { current: 10, max: 10 },
-    xp: 0,
-    attributes: [
-      { attribute: 'STR', value: 17 },
-      { attribute: 'DEX', value: 8 },
-      { attribute: 'CON', value: 14 },
-      { attribute: 'INT', value: 13 },
-      { attribute: 'WIS', value: 10 },
-      { attribute: 'CHA', value: 16 },
-    ],
-    ac: 10,
-  };
-
-  beforeEach(() => {
-    wrapper = shallow(<CharacterBanner {...props} />);
-  });
 
   it('renders properly', () => {
+    wrapper = shallow(<CharacterBanner {...Chaotic} />);
     expect(wrapper.getElement()).toMatchSnapshot();
+  });
+
+  describe('Battle Mode', () => {
+    it('renders properly on battle mode', () => {
+      wrapper = shallow(<CharacterBanner {...Chaotic} battleMode />);
+      expect(wrapper.getElement()).toMatchSnapshot();
+    });
+
+    it('displays short name when defined', () => {
+      wrapper = shallow(<CharacterBanner {...Chaotic} battleMode />);
+      const nameTag = wrapper.find('span[className="nameTag"]');
+      expect(nameTag.text()).toBe('Lee');
+    });
+
+    it("displays first name when short name isn't defined", () => {
+      wrapper = shallow(<CharacterBanner {...Jack} battleMode />);
+      const nameTag = wrapper.find('span[className="nameTag"]');
+      expect(nameTag.text()).toBe('Einwynn');
+    });
+
+    it('displays name properly on single word name', () => {
+      wrapper = shallow(<CharacterBanner {...Hyuna} battleMode />);
+      const nameTag = wrapper.find('span[className="nameTag"]');
+      expect(nameTag.text()).toBe('Carrie');
+    });
   });
 });

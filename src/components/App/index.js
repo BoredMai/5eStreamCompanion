@@ -11,14 +11,28 @@ export default class App extends Component {
     characters: Characters,
   };
 
-  renderBanner = (bannerProps, key) => (
-    <CharacterBanner key={key} {...bannerProps} />
-  );
+  renderBanner = (bannerProps, key) => {
+    const { searchParams } = new URL(document.URL);
+    const battleMode = searchParams.has('battleMode');
+
+    return (
+      <CharacterBanner battleMode={battleMode} key={key} {...bannerProps} />
+    );
+  };
 
   render() {
     const { characters } = this.state;
+    const { searchParams } = new URL(document.URL);
+    const battleMode = searchParams.has('battleMode');
+
     return (
-      <div className={cn(characterContainer, font8Bit)}>
+      <div
+        className={cn(
+          { ['battle-mode']: battleMode },
+          characterContainer,
+          font8Bit
+        )}
+      >
         {characters.map(this.renderBanner)}
       </div>
     );

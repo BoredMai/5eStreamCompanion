@@ -1,5 +1,6 @@
 const Chaotic = {
   name: "Savarax 'Lee' Swovarah",
+  shortName: 'Lee',
   player: 'Chaotic',
   race: 'Dragonborn',
   classes: [{ name: 'Bard', level: 1 }],

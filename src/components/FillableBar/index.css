@@ -10,7 +10,7 @@
   z-index: 2;
 }
 
-:local(.fillable-bar .bar-fill) {
+:local(.bar-fill) {
   height: 1.5rem;
   left: 0;
   top: 0;
@@ -18,7 +18,11 @@
   z-index: -1;
 }
 
-:local(.fillable-bar .bar-label) {
+:local(.bar-label) {
   left: -3rem;
   position: absolute;
+}
+
+:global(.battle-mode) :local(.fillable-bar) {
+  width: 19rem;
 }

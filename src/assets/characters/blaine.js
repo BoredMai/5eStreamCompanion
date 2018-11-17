@@ -1,5 +1,6 @@
 const Blaine = {
   name: "Victor 'Invictus' Ursus",
+  shortName: 'Invictus',
   player: 'PhoenixFire',
   race: 'Half-Orc',
   classes: [{ name: 'Fighter', level: 1 }],

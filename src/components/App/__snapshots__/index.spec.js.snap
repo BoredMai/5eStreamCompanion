@@ -34,6 +34,7 @@ exports[`<App /> renders properly 1`] = `
         },
       ]
     }
+    battleMode={false}
     classes={
       Array [
         Object {
@@ -52,6 +53,7 @@ exports[`<App /> renders properly 1`] = `
     name="Victor 'Invictus' Ursus"
     player="PhoenixFire"
     race="Half-Orc"
+    shortName="Invictus"
     xp={200}
   />
   <CharacterBanner
@@ -84,6 +86,7 @@ exports[`<App /> renders properly 1`] = `
         },
       ]
     }
+    battleMode={false}
     classes={
       Array [
         Object {
@@ -102,6 +105,58 @@ exports[`<App /> renders properly 1`] = `
     name="Savarax 'Lee' Swovarah"
     player="Chaotic"
     race="Dragonborn"
+    shortName="Lee"
+    xp={0}
+  />
+  <CharacterBanner
+    ac={16}
+    attributes={
+      Array [
+        Object {
+          "attribute": "STR",
+          "value": 14,
+        },
+        Object {
+          "attribute": "DEX",
+          "value": 17,
+        },
+        Object {
+          "attribute": "CON",
+          "value": 16,
+        },
+        Object {
+          "attribute": "INT",
+          "value": 8,
+        },
+        Object {
+          "attribute": "WIS",
+          "value": 10,
+        },
+        Object {
+          "attribute": "CHA",
+          "value": 12,
+        },
+      ]
+    }
+    battleMode={false}
+    classes={
+      Array [
+        Object {
+          "level": 1,
+          "name": "Barbarian",
+        },
+      ]
+    }
+    hp={
+      Object {
+        "current": 14,
+        "max": 14,
+      }
+    }
+    level={1}
+    name="Carrie"
+    player="Hyuna"
+    race="Halfling"
     xp={0}
   />
   <CharacterBanner
@@ -134,6 +189,7 @@ exports[`<App /> renders properly 1`] = `
         },
       ]
     }
+    battleMode={false}
     classes={
       Array [
         Object {
@@ -184,6 +240,271 @@ exports[`<App /> renders properly 1`] = `
         },
       ]
     }
+    battleMode={false}
+    classes={
+      Array [
+        Object {
+          "level": 1,
+          "name": "Mystic",
+        },
+      ]
+    }
+    hp={
+      Object {
+        "current": 10,
+        "max": 10,
+      }
+    }
+    level={1}
+    name="Medic"
+    player="Nate"
+    race="Warforged"
+    xp={200}
+  />
+</div>
+`;
+
+exports[`<App /> renders properly on battle mode 1`] = `
+<div
+  className="battle-mode characterContainer font8Bit"
+>
+  <CharacterBanner
+    ac={15}
+    attributes={
+      Array [
+        Object {
+          "attribute": "STR",
+          "value": 16,
+        },
+        Object {
+          "attribute": "DEX",
+          "value": 14,
+        },
+        Object {
+          "attribute": "CON",
+          "value": 16,
+        },
+        Object {
+          "attribute": "INT",
+          "value": 9,
+        },
+        Object {
+          "attribute": "WIS",
+          "value": 12,
+        },
+        Object {
+          "attribute": "CHA",
+          "value": 12,
+        },
+      ]
+    }
+    battleMode={true}
+    classes={
+      Array [
+        Object {
+          "level": 1,
+          "name": "Fighter",
+        },
+      ]
+    }
+    hp={
+      Object {
+        "current": 13,
+        "max": 13,
+      }
+    }
+    level={1}
+    name="Victor 'Invictus' Ursus"
+    player="PhoenixFire"
+    race="Half-Orc"
+    shortName="Invictus"
+    xp={200}
+  />
+  <CharacterBanner
+    ac={10}
+    attributes={
+      Array [
+        Object {
+          "attribute": "STR",
+          "value": 17,
+        },
+        Object {
+          "attribute": "DEX",
+          "value": 8,
+        },
+        Object {
+          "attribute": "CON",
+          "value": 14,
+        },
+        Object {
+          "attribute": "INT",
+          "value": 13,
+        },
+        Object {
+          "attribute": "WIS",
+          "value": 10,
+        },
+        Object {
+          "attribute": "CHA",
+          "value": 16,
+        },
+      ]
+    }
+    battleMode={true}
+    classes={
+      Array [
+        Object {
+          "level": 1,
+          "name": "Bard",
+        },
+      ]
+    }
+    hp={
+      Object {
+        "current": 10,
+        "max": 10,
+      }
+    }
+    level={1}
+    name="Savarax 'Lee' Swovarah"
+    player="Chaotic"
+    race="Dragonborn"
+    shortName="Lee"
+    xp={0}
+  />
+  <CharacterBanner
+    ac={16}
+    attributes={
+      Array [
+        Object {
+          "attribute": "STR",
+          "value": 14,
+        },
+        Object {
+          "attribute": "DEX",
+          "value": 17,
+        },
+        Object {
+          "attribute": "CON",
+          "value": 16,
+        },
+        Object {
+          "attribute": "INT",
+          "value": 8,
+        },
+        Object {
+          "attribute": "WIS",
+          "value": 10,
+        },
+        Object {
+          "attribute": "CHA",
+          "value": 12,
+        },
+      ]
+    }
+    battleMode={true}
+    classes={
+      Array [
+        Object {
+          "level": 1,
+          "name": "Barbarian",
+        },
+      ]
+    }
+    hp={
+      Object {
+        "current": 14,
+        "max": 14,
+      }
+    }
+    level={1}
+    name="Carrie"
+    player="Hyuna"
+    race="Halfling"
+    xp={0}
+  />
+  <CharacterBanner
+    ac={13}
+    attributes={
+      Array [
+        Object {
+          "attribute": "STR",
+          "value": 9,
+        },
+        Object {
+          "attribute": "DEX",
+          "value": 14,
+        },
+        Object {
+          "attribute": "CON",
+          "value": 14,
+        },
+        Object {
+          "attribute": "INT",
+          "value": 10,
+        },
+        Object {
+          "attribute": "WIS",
+          "value": 14,
+        },
+        Object {
+          "attribute": "CHA",
+          "value": 16,
+        },
+      ]
+    }
+    battleMode={true}
+    classes={
+      Array [
+        Object {
+          "level": 1,
+          "name": "Bard",
+        },
+      ]
+    }
+    hp={
+      Object {
+        "current": 10,
+        "max": 10,
+      }
+    }
+    level={1}
+    name="Einwynn Tordannon"
+    player="Jack"
+    race="Lamia"
+    xp={200}
+  />
+  <CharacterBanner
+    ac={15}
+    attributes={
+      Array [
+        Object {
+          "attribute": "STR",
+          "value": 14,
+        },
+        Object {
+          "attribute": "DEX",
+          "value": 10,
+        },
+        Object {
+          "attribute": "CON",
+          "value": 14,
+        },
+        Object {
+          "attribute": "INT",
+          "value": 17,
+        },
+        Object {
+          "attribute": "WIS",
+          "value": 13,
+        },
+        Object {
+          "attribute": "CHA",
+          "value": 8,
+        },
+      ]
+    }
+    battleMode={true}
     classes={
       Array [
         Object {

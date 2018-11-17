@@ -1,5 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<CharacterBanner /> Battle Mode renders properly on battle mode 1`] = `
+<div
+  className="borderContainer"
+>
+  <div
+    className="characterBanner"
+  >
+    <div
+      className="flexColumn"
+    >
+      <span
+        className="nameTag"
+      >
+        Lee
+      </span>
+      <FillableBar
+        color="#F66"
+        current={10}
+        label="HP"
+        max={10}
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`<CharacterBanner /> renders properly 1`] = `
 <div
   className="borderContainer"

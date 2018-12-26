@@ -17,9 +17,9 @@ exports[`<CharacterBanner /> Battle Mode renders properly on battle mode 1`] = `
       </span>
       <FillableBar
         color="#F66"
-        current={10}
+        current={20}
         label="HP"
-        max={10}
+        max={20}
       />
     </div>
   </div>
@@ -56,16 +56,16 @@ exports[`<CharacterBanner /> renders properly 1`] = `
         >
           <FillableBar
             color="#F66"
-            current={10}
+            current={20}
             label="HP"
-            max={10}
+            max={20}
           />
           <FillableBar
             className="marginTopHalf"
             color="#66F"
-            current={0}
+            current={300}
             label="XP"
-            max={300}
+            max={900}
           />
         </div>
         <div
@@ -79,7 +79,7 @@ exports[`<CharacterBanner /> renders properly 1`] = `
           <span
             className="classTag"
           >
-            Bard 1
+            Bard 2
           </span>
         </div>
       </div>

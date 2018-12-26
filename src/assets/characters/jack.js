@@ -5,7 +5,7 @@ const Jack = {
   classes: [{ name: 'Bard', level: 2 }],
   level: 2,
   hp: { current: 20, max: 20 },
-  xp: 465,
+  xp: 600,
   attributes: [
     { attribute: 'STR', value: 9 },
     { attribute: 'DEX', value: 14 },

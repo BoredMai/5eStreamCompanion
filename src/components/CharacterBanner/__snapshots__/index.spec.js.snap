@@ -13,13 +13,13 @@ exports[`<CharacterBanner /> Battle Mode renders properly on battle mode 1`] = `
       <span
         className="nameTag"
       >
-        Lee
+        One
       </span>
       <FillableBar
         color="#F66"
-        current={20}
+        current={10}
         label="HP"
-        max={20}
+        max={10}
       />
     </div>
   </div>
@@ -43,12 +43,12 @@ exports[`<CharacterBanner /> renders properly 1`] = `
           <span
             className="nameTag"
           >
-            Savarax 'Lee' Swovarah
+            Character One
           </span>
           <span
             className="playerTag"
           >
-            Chaotic
+            Player One
           </span>
         </div>
         <div
@@ -56,16 +56,16 @@ exports[`<CharacterBanner /> renders properly 1`] = `
         >
           <FillableBar
             color="#F66"
-            current={20}
+            current={10}
             label="HP"
-            max={20}
+            max={10}
           />
           <FillableBar
             className="marginTopHalf"
             color="#66F"
-            current={300}
+            current={0}
             label="XP"
-            max={900}
+            max={300}
           />
         </div>
         <div
@@ -74,12 +74,12 @@ exports[`<CharacterBanner /> renders properly 1`] = `
           <span
             className="raceTag"
           >
-            Dragonborn
+            Race
           </span>
           <span
             className="classTag"
           >
-            Bard 2
+            Class 1
           </span>
         </div>
       </div>
@@ -92,19 +92,19 @@ exports[`<CharacterBanner /> renders properly 1`] = `
       >
         <AttributeBlock
           attribute="STR"
-          value={17}
+          value={10}
         />
         <AttributeBlock
           attribute="DEX"
-          value={8}
+          value={10}
         />
         <AttributeBlock
           attribute="CON"
-          value={14}
+          value={10}
         />
         <AttributeBlock
           attribute="INT"
-          value={13}
+          value={10}
         />
         <AttributeBlock
           attribute="WIS"
@@ -112,14 +112,14 @@ exports[`<CharacterBanner /> renders properly 1`] = `
         />
         <AttributeBlock
           attribute="CHA"
-          value={16}
+          value={10}
         />
       </div>
       <div
         className="acShieldContainer"
       >
         <ACShield
-          value={10}
+          value={16}
         />
       </div>
     </div>

@@ -6,7 +6,7 @@ const Chaotic = {
   classes: [{ name: 'Bard', level: 2 }],
   level: 2,
   hp: { current: 20, max: 20 },
-  xp: 300,
+  xp: 400,
   attributes: [
     { attribute: 'STR', value: 17 },
     { attribute: 'DEX', value: 8 },
